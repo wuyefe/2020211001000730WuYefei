@@ -23,7 +23,7 @@
     </context-param>
     <!--<servlet>
         <servlet-name>giveanyname</servlet-name>
-        <servlet-class>com.qiuhongtao.week2.HelloWorldServlet</servlet-class>&lt;!&ndash; u need to add package also&ndash;&gt;
+        <servlet-class>com.wuyefei.week2.HelloWorldServlet</servlet-class>&lt;!&ndash; u need to add package also&ndash;&gt;
     </servlet>
     
     <servlet-mapping>
@@ -33,7 +33,7 @@
     <!-- we need to tell tomcat we have created a new servlet-->
     <!--<servlet>
         <servlet-name>LifeCycleServlet</servlet-name>
-        <servlet-class>com.qiuhongtao.week3.LifeCycleServlet</servlet-class>
+        <servlet-class>com.wuyefei.week3.LifeCycleServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
@@ -43,11 +43,11 @@
     &lt;!&ndash; we need to tell tomcat &ndash;&gt;
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>com.qiuhongtao.week3.RegisterServlet</servlet-class>
+        <servlet-class>com.wuyefei.week3.RegisterServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>JDBCDemoServlet</servlet-name>
-        <servlet-class>com.qiuhongtao.week4.JDBCDemoServlet</servlet-class>
+        <servlet-class>com.wuyefei.week4.JDBCDemoServlet</servlet-class>
         <init-param>
             <param-name>driver</param-name>
             <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
@@ -81,14 +81,11 @@
 
     <filter>
         <filter-name>HelloFilter</filter-name>
-        <filter-class>com.qiuhongtao.filter.HelloFilter</filter-class>
+        <filter-class>com.wuyefei.filter.HelloFilter</filter-class>
     </filter>
 
     <filter-mapping>
         <filter-name>HelloFilter</filter-name>
-        <url-pattern>/*</url-pattern><!-- url of HelloServlet -this filter is only for HelloServlet-->
+        <url-pattern>/hello</url-pattern><!-- url of HelloServlet -this filter is only for HelloServlet-->
     </filter-mapping>
-
-    <filter></filter>
-
 </web-app>
