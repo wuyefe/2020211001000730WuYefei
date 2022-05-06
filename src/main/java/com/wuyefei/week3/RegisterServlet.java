@@ -8,7 +8,7 @@ import java.sql.*;
 public class RegisterServlet extends HttpServlet {
 
     private Connection con;
-
+//
     @Override
     public void init() throws ServletException {
         super.init();
@@ -34,7 +34,7 @@ public class RegisterServlet extends HttpServlet {
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+            request.getRequestDispatcher("WEB-INF/views/register.jsp").forward(request,response);
     }
 
     @Override
@@ -91,7 +91,8 @@ public class RegisterServlet extends HttpServlet {
            //week6
             //after register a new user - user can login
             response.sendRedirect("login.jsp");
-
+//week - 9
+            response.sendRedirect("login");//LoginServlet
         } catch (SQLException e) {
             e.printStackTrace();
         }
