@@ -1,7 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: liu'teng
-  Date: 2022/5/16
+  User: wu yefei  Date: 2022/5/16
   Time: 15:58
   To change this template use File | Settings | File Templates.
 --%>
@@ -11,7 +10,7 @@
     <title>MyJsp.jsp</title>
 </head>
 <body>
-  <h2>Author:<span style="color: green">2020211001000730wu yefei</span></h2>
+  <h2>Author:<span style="color: green">2020211001000730wu ye-fei</span></h2>
   <span>I am MyJsp.jsp</span>
   <h2>The action is "MyDearServletURL"</h2>
   <form method="post"  action="../MyDearServletURL">

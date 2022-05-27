@@ -1,36 +1,28 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 4/5/2021
-  Time: 5:47 PM
+  User: wuyouwulv
+  Date: 2022/4/2
+  Time: 20:50
   To change this template use File | Settings | File Templates.
 --%>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="header.jsp"%>
-<h1> User Info</h1>
-<%
-    /*Cookie [] allCookies=request.getCookies();
-    for(Cookie c:allCookies){
-        //get one by one
-        out.println("<br/>"+c.getName()+" --- "+c.getValue());
-    }*/
-    User u=(User) session.getAttribute("user");
-
-%>
-<table>
+<h1 align="center">User List</h1>
+<table width=540 border=1 align=center>
+    <caption>Users</caption>
     <tr>
-        <td>Username:</td><td><%=u.getUsername()%></td>
-    </tr><tr>
-    <td>Password:</td><td><%=u.getPassword()%></td>
-</tr><tr>
-    <td>Email:</td><td><%=u.getEmail()%></td>
-</tr><tr>
-    <td>Gender:</td><td><%=u.getGender()%></td>
-</tr><tr>
-    <td>Birth Date:</td><td><%=u.getBirthDate()%></td>
-</tr>
-
+        <td>UserName</td>
+        <td>PassWord</td>
+        <td>Email</td>
+        <td>Gender</td>
+        <td>BirthDate</td>
+    </tr>
+    <tr>
+        <td><%=request.getAttribute("username")%></td>
+        <td><%=request.getAttribute("password")%></td>
+        <td><%=request.getAttribute("email")%></td>
+        <td><%=request.getAttribute("gender")%></td>
+        <td><%=request.getAttribute("birthdate")%></td>
+    </tr>
 </table>
-<a href="updateUser.jsp">Update</a>
-
 <%@include file="footer.jsp"%>

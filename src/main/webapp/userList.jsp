@@ -1,36 +1,42 @@
-<%@ page import="java.sql.ResultSet" %><%--
+<%--
   Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 3/27/2022
-  Time: 11:03 PM
+  User: wuyouwulv
+  Date: 2022/4/2
+  Time: 15:27
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-<%
-    ResultSet rs=(ResultSet) request.getAttribute("rsname");
-    out.println("<html><title></title><body><table border=1><tr>");
-    out.println("<td>Username</td><td>password</td><td>Email</td><td>Gender</td><td>Birthday</td><tr/>");
-    while(rs.next()){
-//get one by one
-        out.println("<tr>");
-        out.println("<td>"+rs.getString("username")+"</td>");
-        out.println("<td>"+rs.getString("password")+"</td>");
-        out.println("<td>"+rs.getString("email")+"</td>");
-        out.println("<td>"+rs.getString("gender")+"</td>");
-        out.println("<td>"+rs.getString("birthdate")+"</td>");
-
-        out.println("</tr>");
-
-
-    }
-    out.println("</table></body></html>");
-
-%>
-
-</body>
-</html>
+<%@ page import="java.sql.ResultSet" %>
+<%@include file="header.jsp"%>
+<h1 align="center">User List</h1>
+<table width=540 border=1 align=center>
+    <caption>Users</caption>
+    <tr>
+        <td>ID</td>
+        <td>UserName</td>
+        <td>PassWord</td>
+        <td>Email</td>
+        <td>Gender</td>
+        <td>BirthDate</td>
+    </tr>
+    <%
+        ResultSet rs = (ResultSet) request.getAttribute("rsname");
+        while (rs.next()){
+            int id1 = rs.getInt("id");
+            String username1 = rs.getString("username");
+            String password1 =rs.getString("password");
+            String email1 = rs.getString("email");
+            String gender1 = rs.getString("gender");
+            String birthdate1 = rs.getString("birthdate");
+            out.println("           <tr>");
+            out.println(               "<td>"+id1+"</td>");
+            out.println(               "<td>"+username1+"</td>");
+            out.println(               "<td>"+password1+"</td>");
+            out.println(               "<td>"+email1+"</td>");
+            out.println(               "<td>"+gender1+"</td>");
+            out.println(               "<td>"+birthdate1+"</td>");
+            out.println("           </tr>");
+        }
+    %>
+</table>
+<%@include file="footer.jsp"%>

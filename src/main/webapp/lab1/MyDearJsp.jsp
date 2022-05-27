@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: RaoChenxu
+  User: wu yefei
   Date: 2022/5/16
   Time: 15:59
   To change this template use File | Settings | File Templates.
@@ -11,7 +11,7 @@
     <title>MyDearJsp.jsp</title>
 </head>
 <body>
-    <h2>Author:<span style="color: green">2020211001000730wu yefei</span></h2>
+    <h2>Author:<span style="color: green">2020211001000730 wu yefei</span></h2>
 
     <%
         request.setCharacterEncoding("UTF-8");
